@@ -108,3 +108,25 @@ h1 {
   justify-content: center;
   background-color: #172627;
 }
+.addBtn {
+  background-color: #20cd8d;
+  color: #fff;
+  border: none;
+
+  font-size: 15px;
+
+  cursor: pointer;
+  margin-top: 30px;
+}
+.addBtn:hover {
+  box-shadow: 0px 0px 10px 0px #0f744f;
+}
+
+.inputTodo {
+  box-shadow: 0px 0px 10px 0px #20cd8d;
+  background-color: #172627;
+  border-color: #20cd8d;
+}
+.inputTodo:focus {
+  border-color: #20cd8d;
+}
