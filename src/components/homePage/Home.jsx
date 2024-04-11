@@ -3,6 +3,7 @@ import "./Home.css";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import AssessmentIcon from "@mui/icons-material/Assessment";
 //import DriveFileRenameOutlineRoundedIcon from "@mui/icons-material/DriveFileRenameOutlineRounded";
+
 import TimelineIcon from "@mui/icons-material/Timeline";
 import PomodoroTimer from "../timer/pomo";
 import DisplayList from "../toDoList/display";
@@ -28,12 +29,10 @@ function Home() {
       </div>
       <div className="mainBody">
         <Report />
-        {/* <Customize /> */}
-        {/* <PomodoroTimer /> */}
       </div>
       <div className="todoList">
         <div className="addTask">
-          <DisplayList /> 
+          <DisplayList />
         </div>
       </div>
     </div>

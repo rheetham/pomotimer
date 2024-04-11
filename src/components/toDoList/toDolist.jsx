@@ -41,7 +41,7 @@ function ToDoList() {
           <span>Add</span>
         </button>
       </div>
-      <div>
+      <div className="itemList">
         <ul>
           {items.map((todoItem, index) => (
             <ToDoItem

@@ -1,40 +1,41 @@
 .Reports {
-    height: 60vh;
-    width: 25vw;
-    margin: 50px auto;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 0 1px #20cd8d;
-    border-radius: 10%;
+  height: 63vh;
+  width: 25vw;
+  margin: 50px auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 1px #20cd8d;
+  border-radius: 10%;
 }
 
 hr {
-    width: 100%;
-    border: 1px solid #20cd8d;
+  width: 100%;
+  border: 1px solid #20cd8d;
 }
 
 .frame {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
 }
 
-.focusHours, .tasksCompleted {
-    text-align: center;
-    width: 60px;
-    background-color: #172627;
-    color: #fff;
-    border: 1px solid #20cd8d;
-    margin: 10px;
-    padding: 20px 35px;
-    font-size: 20px;
-    border-radius: 35px;
-    cursor: pointer;
+.focusHours,
+.tasksCompleted {
+  text-align: center;
+  width: 60px;
+  background-color: #172627;
+  color: #fff;
+  border: 1px solid #20cd8d;
+  margin: 10px;
+  padding: 20px 35px;
+  font-size: 20px;
+  border-radius: 35px;
+  cursor: pointer;
 }
 
 .update {
@@ -50,4 +51,12 @@ hr {
 
 .update:hover {
   box-shadow: 0px 0px 10px 0px #0f744f;
+}
+.close {
+  color: #fff;
+  border: none;
+  margin: 10px;
+  margin-left: 400px;
+  border-radius: 35px;
+  cursor: pointer;
 }
