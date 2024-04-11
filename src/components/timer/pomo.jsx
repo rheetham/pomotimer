@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import DriveFileRenameOutlineRoundedIcon from "@mui/icons-material/DriveFileRenameOutlineRounded";
+import DisplayList from "../toDoList/display";
+import { Link } from "react-router-dom";
 
 const PomodoroTimer = () => {
   const [focusTime, setFocusTime] = useState(45 * 60); // 45 minutes in seconds
   const [breakTime, setBreakTime] = useState(15 * 60); // 15 minutes in seconds
   const [startText, setStartText] = useState("Start");
-  const [timerType, setTimerType] = useState("focus.");
+  const [timerType, setTimerType] = useState("focus");
   const [timer, setTimer] = useState(focusTime);
   const [isRunning, setIsRunning] = useState(false);
 
@@ -18,11 +20,11 @@ const PomodoroTimer = () => {
             return prevTimer - 1;
           } else {
             // Switch between focus and break time
-            setTimerType(timerType === "focus." ? "BREAK" : "focus.");
-            return timerType === "focus." ? breakTime : focusTime;
+            setTimerType(timerType === "focus" ? "BREAK" : "focus.");
+            return timerType === "focus" ? breakTime : focusTime;
           }
         });
-      }, 1);
+      }, 1000);
     } else {
       clearInterval(interval);
     }
@@ -36,6 +38,7 @@ const PomodoroTimer = () => {
   };
 
   return (
+    <div className="mainbody">
     <div className="timerBody2">
       <div className="timerBody">
         <span className="focus">{timerType}</span>
@@ -53,8 +56,14 @@ const PomodoroTimer = () => {
         </button>
       </div>
       <div className="customizationButton">
-        <DriveFileRenameOutlineRoundedIcon fontSize="medium" />
+        <Link to="/customize"><DriveFileRenameOutlineRoundedIcon fontSize="medium" /></Link>
       </div>
+    </div>
+    <div className="todoList">
+        <div className="addTask">
+          <DisplayList />
+        </div>
+    </div>
     </div>
   );
 };

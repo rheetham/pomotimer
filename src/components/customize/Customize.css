@@ -3,12 +3,22 @@
   width: 25vw;
   margin: 50px auto;
   padding: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   box-shadow: 0 0 0 1px #20cd8d;
   border-radius: 10%;
+}
+
+.updateHeader {
+  display: flex;
+}
+
+.updateTitle {
+  margin-left: 142px;
+  margin-right: 100px;
+}
+
+.close {
+  margin: none;
+  cursor: pointer;
 }
 
 hr {
@@ -16,12 +26,19 @@ hr {
   border: 1px solid #20cd8d;
 }
 
+.updateBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .input {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 25px;
+  margin: 20px;
 }
 
 .updateFocus,

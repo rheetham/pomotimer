@@ -24,15 +24,6 @@ h1 {
   margin-left: auto;
 }
 
-.head {
-  background-color: #172627;
-  box-shadow: 0 0 0 1px #20cd8d;
-  height: 40px;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-}
-
 .logo {
   margin: 0;
   float: left;
@@ -43,6 +34,23 @@ h1 {
   margin: 5px;
 }
 
+.mainbody {
+  background-color: #172627;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.head {
+  background-color: #172627;
+  border-bottom: 1px solid #20cd8d;
+  height: 35px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
 .timerBody {
   height: 75vh;
   flex-direction: column;
@@ -51,11 +59,10 @@ h1 {
   align-items: center;
 }
 .timerBody2 {
-  box-shadow: 0px 0px 10px 0px #20cd8d;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 35px;
 }
 
 .customizationButton {
