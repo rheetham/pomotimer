@@ -1,18 +1,25 @@
 .Reports {
-  height: 63vh;
+  height: 60vh;
   width: 25vw;
-  margin: 50px auto;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  margin: 70px auto;
+  padding: 25px;
   box-shadow: 0 0 0 1px #20cd8d;
   border-radius: 10%;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.reportsTitle {
+  margin-left: 140px;
+  margin-right: 90px;
+}
+
 hr {
-  width: 100%;
+  width: 150px;
+  margin-bottom: 35px;
   border: 1px solid #20cd8d;
 }
 
@@ -21,7 +28,7 @@ hr {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 10px;
+  margin: 0px;
 }
 
 .focusHours,
@@ -56,7 +63,6 @@ hr {
   color: #fff;
   border: none;
   margin: 10px;
-  margin-left: 400px;
   border-radius: 35px;
   cursor: pointer;
 }

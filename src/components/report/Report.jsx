@@ -4,14 +4,16 @@ import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 function Report() {
   return (
     <div className="Reports">
-      <div>
+      <div className="header">
+        <h1 className="reportsTitle">
+          Reports
+       </h1>
         <HighlightOffIcon className="close" />
       </div>
-      <h1>
-        Reports
-        <hr />
-      </h1>
 
+      <hr />
+
+    <div className="reportsBody">
       <label className="frame">
         <h2>Focus Hours</h2>
         <div className="focusHours">21</div>
@@ -20,6 +22,7 @@ function Report() {
         <h2>Tasks Completed</h2>
         <div className="tasksCompleted">17</div>
       </label>
+    </div>
     </div>
   );
 }
