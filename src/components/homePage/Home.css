@@ -26,7 +26,8 @@ h1 {
 
 .head {
   background-color: #172627;
-  height: 5vh;
+  box-shadow: 0 0 0 1px #20cd8d;
+  height: 40px;
   padding: 20px;
   display: flex;
   align-items: center;

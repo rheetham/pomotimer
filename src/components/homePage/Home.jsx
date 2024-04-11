@@ -6,6 +6,9 @@ import AssessmentIcon from "@mui/icons-material/Assessment";
 import TimelineIcon from "@mui/icons-material/Timeline";
 import PomodoroTimer from "../timer/pomo";
 import DisplayList from "../toDoList/display";
+import Customize from "../customize/customize";
+import Report from "../report/Report";
+
 function Home() {
   return (
     <div className="home">
@@ -23,12 +26,14 @@ function Home() {
           </div>
         </div>
       </div>
-      <div>
-        <PomodoroTimer />
+      <div className="mainBody">
+        <Report />
+        {/* <Customize /> */}
+        {/* <PomodoroTimer /> */}
       </div>
       <div className="todoList">
         <div className="addTask">
-          <DisplayList />
+          <DisplayList /> 
         </div>
       </div>
     </div>
