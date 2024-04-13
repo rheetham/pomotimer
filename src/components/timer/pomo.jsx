@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import DriveFileRenameOutlineRoundedIcon from "@mui/icons-material/DriveFileRenameOutlineRounded";
-import DisplayList from "../toDoList/display";
+import Task from "../task/task";
 import { Link } from "react-router-dom";
 import Navbar from "../navbar/navbar";
 import "../homePage/Home.css";
@@ -64,11 +64,9 @@ const PomodoroTimer = () => {
             </Link>
           </div>
         </div>
-        <div className="todoList">
-          <div className="addTask">
-            <DisplayList />
+          <div>
+            <Task />
           </div>
-        </div>
       </div>
     </>
   );

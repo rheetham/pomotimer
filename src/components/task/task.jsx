@@ -1,11 +1,10 @@
 import React from "react";
-
-import ToDoList from "./toDolist";
+import "./task.css";
+import InsertTask from "./insertTask";
+import AddTask from "./addTask";
 import { useState } from "react";
 
-import Task from "./task";
-
-const DisplayList = () => {
+const Task = () => {
   const [content, setContent] = useState(false);
 
   const changeContent = () => {
@@ -14,8 +13,9 @@ const DisplayList = () => {
 
   return (
     <div>
-      <p onClick={changeContent}>{content ? <ToDoList /> : <Task />}</p>
+      <p onClick={changeContent}>{content ? <InsertTask/> : <AddTask />}</p>
     </div>
   );
 };
-export default DisplayList;
+
+export default Task;

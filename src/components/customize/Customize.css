@@ -17,12 +17,11 @@
 }
 
 .close {
-  margin: none;
   cursor: pointer;
 }
 
 hr {
-  width: 100%;
+  width: 40%;
   border: 1px solid #20cd8d;
 }
 
@@ -39,19 +38,6 @@ hr {
   align-items: center;
   justify-content: center;
   margin: 20px;
-}
-
-.updateFocus,
-.updateBreak {
-  text-align: center;
-  background-color: #172627;
-  color: #fff;
-  border: 1px solid #20cd8d;
-  margin: 10px;
-  padding: 15px 30px;
-  font-size: 20px;
-  border-radius: 35px;
-  cursor: pointer;
 }
 
 .update {

@@ -23,7 +23,7 @@ const Navbar = () => {
   };
   return (
     <div className="head">
-      <Link to="/">
+      <Link to="/timer">
         <div className="logo icon">
           <TimelineIcon fontSize="large" />
           <h1>Zenith</h1>

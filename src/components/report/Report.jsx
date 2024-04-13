@@ -11,7 +11,7 @@ function Report() {
       <div className="Reports">
         <div className="header">
           <h1 className="reportsTitle">Reports</h1>
-          <Link to="/">
+          <Link to="/timer">
             <HighlightOffIcon className="close" />
           </Link>
         </div>
