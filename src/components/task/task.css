@@ -1,0 +1,46 @@
+.addTask {
+    cursor: pointer;
+    color: #20cd8d;
+}
+
+h3 {
+    margin: 0;
+}
+
+.form-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.input-style {
+  text-align: center;
+  background-color: #172627;
+  color: #fff;
+  border: 1px solid #20cd8d;
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 35px;
+}
+
+.insertTask {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.taskButton {
+  background-color: #20cd8d;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  font-size: 15px;
+  border-radius: 35px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
