@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import DriveFileRenameOutlineRoundedIcon from "@mui/icons-material/DriveFileRenameOutlineRounded";
 import DisplayList from "../toDoList/display";
 import { Link } from "react-router-dom";
-
+import Navbar from "../navbar/navbar";
+import "../homePage/Home.css";
 const PomodoroTimer = () => {
   const [focusTime, setFocusTime] = useState(45 * 60); // 45 minutes in seconds
   const [breakTime, setBreakTime] = useState(15 * 60); // 15 minutes in seconds
@@ -38,33 +39,38 @@ const PomodoroTimer = () => {
   };
 
   return (
-    <div className="mainbody">
-    <div className="timerBody2">
-      <div className="timerBody">
-        <span className="focus">{timerType}</span>
-        <div className="duo">
-          <span className="timer">
-            {Math.floor(timer / 60)}:{timer % 60 < 10 ? "0" : ""}
-            {timer % 60}
-          </span>
+    <>
+      <Navbar />
+      <div className="mainbody">
+        <div className="timerBody2">
+          <div className="timerBody">
+            <span className="focus">{timerType}</span>
+            <div className="duo">
+              <span className="timer">
+                {Math.floor(timer / 60)}:{timer % 60 < 10 ? "0" : ""}
+                {timer % 60}
+              </span>
+            </div>
+            <button
+              className="startButton btn btn-success"
+              onClick={handleStartPause}
+            >
+              {startText}
+            </button>
+          </div>
+          <div className="customizationButton">
+            <Link to="/customize">
+              <DriveFileRenameOutlineRoundedIcon fontSize="medium" />
+            </Link>
+          </div>
         </div>
-        <button
-          className="startButton btn btn-success"
-          onClick={handleStartPause}
-        >
-          {startText}
-        </button>
-      </div>
-      <div className="customizationButton">
-        <Link to="/customize"><DriveFileRenameOutlineRoundedIcon fontSize="medium" /></Link>
-      </div>
-    </div>
-    <div className="todoList">
-        <div className="addTask">
-          <DisplayList />
+        <div className="todoList">
+          <div className="addTask">
+            <DisplayList />
+          </div>
         </div>
-    </div>
-    </div>
+      </div>
+    </>
   );
 };
 

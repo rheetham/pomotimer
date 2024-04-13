@@ -1,65 +1,40 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Home.css";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import AssessmentIcon from "@mui/icons-material/Assessment";
-import TimelineIcon from "@mui/icons-material/Timeline";
+
 import PomodoroTimer from "../timer/pomo";
 import Customize from "../customize/customize";
 import Report from "../report/Report";
-import { createBrowserRouter, Link, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Navbar from "../navbar/navbar";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <><div className="head">
-        <div className="logo icon">
-          <TimelineIcon fontSize="large" />
-          <h1>Zenith</h1>
-        </div>
-        <div className="push">
-          <div className="reports icon">
-            <Link to="/report"><AssessmentIcon fontSize="large" /></Link>
-          </div>
-          <div className="login icon">
-            <AccountCircleIcon fontSize="large" />
-          </div>
-        </div>
-      </div><PomodoroTimer /></>,
+    element: (
+      <>
+        <Navbar />
+        <PomodoroTimer />
+      </>
+    ),
   },
   {
     path: "/customize",
-    element: <><div className="head">
-        <div className="logo icon">
-          <TimelineIcon fontSize="large" />
-          <h1>Zenith</h1>
-        </div>
-        <div className="push">
-          <div className="reports icon">
-            <Link to="/report"><AssessmentIcon fontSize="large" /></Link>
-          </div>
-          <div className="login icon">
-            <AccountCircleIcon fontSize="large" />
-          </div>
-        </div>
-      </div><Customize /></>,
+    element: (
+      <>
+        <Navbar />
+        <Customize />
+      </>
+    ),
   },
   {
     path: "/report",
-    element: <><div className="head">
-        <div className="logo icon">
-          <TimelineIcon fontSize="large" />
-          <h1>Zenith</h1>
-        </div>
-        <div className="push">
-          <div className="reports icon">
-            <Link to="/report"><AssessmentIcon fontSize="large" /></Link>
-          </div>
-          <div className="login icon">
-            <AccountCircleIcon fontSize="large" />
-          </div>
-        </div>
-      </div><Report /></>
-  }
+    element: (
+      <>
+        <Navbar />
+        <Report />
+      </>
+    ),
+  },
 ]);
 
 function Home() {
