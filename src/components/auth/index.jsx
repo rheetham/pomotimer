@@ -13,10 +13,12 @@ export const Auth = () => {
       userID: results.user.uid,
       name: results.user.displayName,
       profilePhoto: results.user.photoURL,
+      email: results.user.email,
       isAuth: true,
     };
     localStorage.setItem("auth", JSON.stringify(authInfo));
     navigate("/timer");
+    localStorage.setItem("name", JSON.stringify(authInfo.name));
   };
 
   //if (isAuth) {
