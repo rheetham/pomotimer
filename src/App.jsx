@@ -5,6 +5,7 @@ import Auth from "./components/auth";
 import PomodoroTimer from "./components/timer/pomo";
 import "./components/homePage/Home.css";
 import Customize from "./components/customize/customize";
+import DisplayReport from "./components/report/displayReport";
 function App() {
   return (
     <div>
@@ -12,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Auth />} />
           <Route path="/timer" element={<PomodoroTimer />} />
-          <Route path="/report" element={<Report />} />
+          <Route path="/report" element={<DisplayReport />} />
           <Route path="/customize" element={<Customize />} />
         </Routes>
       </Router>
