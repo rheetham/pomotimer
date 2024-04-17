@@ -58,15 +58,10 @@ const PomodoroTimer = () => {
               {startText}
             </button>
           </div>
-          <div className="customizationButton">
-            <Link to="/customize">
-              <DriveFileRenameOutlineRoundedIcon fontSize="medium" />
-            </Link>
-          </div>
         </div>
-          <div>
-            <Task />
-          </div>
+        <div>
+          <Task />
+        </div>
       </div>
     </>
   );

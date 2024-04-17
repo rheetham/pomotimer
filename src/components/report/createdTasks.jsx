@@ -21,9 +21,11 @@ function DisplayReport() {
       unsubscribe();
     };
   }, []);
+
   return (
     <div>
       <h2>Details</h2>
+
       <div className="report">
         {tasks.map((task, index) =>
           task.userName === localStorage.getItem("name") ? (
