@@ -24,9 +24,13 @@ function CreatedTasks() {
 
   return (
     <div>
-      <h2>Details</h2>
-
       <div className="report">
+        <div className="createdTasksTitle">
+          Created Tasks
+        </div>
+        <div className="completedTasksTitle">
+          <Link to="/completedTasks"> Completed Tasks</Link>
+        </div>
         {tasks.map((task, index) =>
           task.userName === localStorage.getItem("name") ? (
             <div key={index} className="task">
