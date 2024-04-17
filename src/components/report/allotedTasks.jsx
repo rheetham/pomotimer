@@ -3,12 +3,12 @@ import React, { useEffect, useState } from "react";
 import { db } from "../../config/firebase-config";
 import "./Report.css";
 
-function CompletedTasks() {
+function AllottedTasks() {
   const [tasks2, setTasks2] = useState([]);
   useEffect(() => {
     const q = query(
-      collection(db, "completedTasks"),
-      orderBy("finishedAt", "desc")
+      collection(db, "allottedTask"),
+      orderBy("submitBy", "desc")
     );
     const unsubscribe = onSnapshot(q, (snapshot) => {
       const taskList = [];
@@ -27,7 +27,7 @@ function CompletedTasks() {
         task.userName === localStorage.getItem("name") ? (
           <div key={index} className="task">
             <h3>Task Name: {task.taskName}</h3>
-            <h4>Finished At: {task.finishedAt?.toDate().toString()}</h4>
+            <h4>Submit By: {task.submitBy?.toDate().toString()}</h4>
           </div>
         ) : null
       )}
@@ -35,4 +35,4 @@ function CompletedTasks() {
   );
 }
 
-export default CompletedTasks;
+export default AllottedTasks;

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { db } from "../../config/firebase-config";
 import "./Report.css";
 
-function DisplayReport() {
+function CreatedTasks() {
   const [tasks, setTasks] = useState([]);
   useEffect(() => {
     const q = query(
@@ -32,7 +32,6 @@ function DisplayReport() {
             <div key={index} className="task">
               <h3>Task Name: {task.taskName}</h3>
               <h4>Created At: {task.CreatedAt?.toDate().toString()}</h4>
-              <h4>Username : {task.userName}</h4>
             </div>
           ) : null
         )}
@@ -41,4 +40,4 @@ function DisplayReport() {
   );
 }
 
-export default DisplayReport;
+export default CreatedTasks;
