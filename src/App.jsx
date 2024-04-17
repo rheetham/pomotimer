@@ -4,7 +4,6 @@ import Report from "./components/report/Report";
 import Auth from "./components/auth";
 import PomodoroTimer from "./components/timer/pomo";
 import "./components/homePage/Home.css";
-import Customize from "./components/customize/customize";
 import DisplayReport from "./components/report/createdTasks";
 function App() {
   return (
