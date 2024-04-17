@@ -1,6 +1,6 @@
 import React from "react";
 import TimelineIcon from "@mui/icons-material/Timeline";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import LogoutIcon from "@mui/icons-material/Logout";
 import AssessmentIcon from "@mui/icons-material/Assessment";
 import { Link } from "react-router-dom";
 import "../homePage/Home.css";
@@ -37,7 +37,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="login icon">
-          <AccountCircleIcon fontSize="large" onClick={handleLogout} />
+          <LogoutIcon fontSize="large" onClick={handleLogout} />
         </div>
       </div>
     </div>

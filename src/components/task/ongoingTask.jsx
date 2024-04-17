@@ -23,7 +23,7 @@ async function deleteLatestDocument() {
   });
 }
 
-function Task() {
+function AddTask() {
   const [tasks, setTasks] = useState([]);
   useEffect(() => {
     const q = query(collection(db, "currentTask"), orderBy("userName", "desc"));
@@ -59,16 +59,16 @@ function Task() {
         {tasks.map((task, index) =>
           task.userName === localStorage.getItem("name") ? (
             <div key={index} className="task">
-              <h3>Task Name: {task.taskName}</h3>
+              <h3> {task.taskName}</h3>
+              <div>
+                <button onClick={handleDelete}>Completed?</button>
+              </div>
             </div>
           ) : null
         )}
-      </div>
-      <div>
-        <button onClick={handleDelete}>Completed?</button>
       </div>
     </div>
   );
 }
 
-export default Task;
+export default AddTask;
