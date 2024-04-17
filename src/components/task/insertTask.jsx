@@ -7,9 +7,13 @@ function InsertTask() {
   const name = localStorage.getItem("name");
 
   const handleNew = async () => {
-    await addDoc(collection(db, "tasks"), {
+    await addDoc(collection(db, "createdTasks"), {
       taskName: document.getElementsByName("taskname")[0].value,
       CreatedAt: serverTimestamp(),
+      userName: name,
+    });
+    await addDoc(collection(db, "currentTask"), {
+      taskName: document.getElementsByName("taskname")[0].value,
       userName: name,
     });
   };

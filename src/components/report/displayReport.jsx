@@ -1,17 +1,26 @@
-import { onSnapshot, collection } from "firebase/firestore";
+import { onSnapshot, collection, query, orderBy } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { db } from "../../config/firebase-config";
 import "./Report.css";
 
 function DisplayReport() {
   const [tasks, setTasks] = useState([]);
-  useEffect(
-    () =>
-      onSnapshot(collection(db, "tasks"), (snapshot) =>
-        setTasks(snapshot.docs.map((doc) => doc.data()))
-      ),
-    []
-  );
+  useEffect(() => {
+    const q = query(
+      collection(db, "createdTasks"),
+      orderBy("CreatedAt", "desc")
+    );
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const taskList = [];
+      snapshot.forEach((doc) => {
+        taskList.push(doc.data());
+      });
+      setTasks(taskList);
+    });
+    return () => {
+      unsubscribe();
+    };
+  }, []);
   return (
     <div>
       <h2>Details</h2>

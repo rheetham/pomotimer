@@ -1,7 +1,7 @@
 import React from "react";
 import "./task.css";
 import InsertTask from "./insertTask";
-import AddTask from "./addTask";
+import AddTask from "./ongoingTask";
 import { useState } from "react";
 
 const Task = () => {
@@ -13,7 +13,7 @@ const Task = () => {
 
   return (
     <div>
-      <p onClick={changeContent}>{content ? <InsertTask/> : <AddTask />}</p>
+      <p onClick={changeContent}>{content ? <InsertTask /> : <AddTask />}</p>
     </div>
   );
 };
