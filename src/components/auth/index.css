@@ -1,0 +1,32 @@
+.signIn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.icon {
+    display: flex;
+    margin-right: 10px;
+}
+
+hr {
+    width: 120px;
+    margin: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #20cd8d;
+
+}
+
+.signInButton {
+    background-color: #20cd8d;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 35px;
+    cursor: pointer;
+    margin-top: 30px;
+}
