@@ -1,7 +1,7 @@
 import { onSnapshot, collection, query, orderBy } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { db } from "../../config/firebase-config";
-import "./createdTasks.css";
+import "./allotedtasks.css";
 
 function AllottedTasks() {
   const [tasks2, setTasks2] = useState([]);
@@ -23,11 +23,12 @@ function AllottedTasks() {
   }, []);
   return (
     <div className="report">
+      <div className="allottedTitle">Allotted Tasks</div>
       {tasks2.map((task, index) =>
         task.userName === localStorage.getItem("name") ? (
-          <div key={index} className="task">
-            <h3>Task Name: {task.taskName}</h3>
-            <h4>Submit By: {task.submitBy?.toDate().toString()}</h4>
+          <div key={index} className="taskDetails">
+            <div className="taskNameTitle">Task Name: {task.taskName}</div>
+            <div>Submit By: {task.submitBy?.toDate().toString()}</div>
           </div>
         ) : null
       )}
