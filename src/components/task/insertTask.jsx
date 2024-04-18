@@ -6,10 +6,10 @@ import AddTask from "./ongoingTask";
 import { Add } from "@mui/icons-material";
 function InsertTask() {
   const name = localStorage.getItem("name");
-  const [content, setContent] = useState(false);
+  const [content, setContent] = useState(true);
 
   const changeContent = () => {
-    setContent(true);
+    setContent(false);
   };
 
   const handleNew = async (e) => {
@@ -26,9 +26,7 @@ function InsertTask() {
     changeContent();
   };
   return content ? (
-    <AddTask />
-  ) : (
-    <div>
+        <div>
       <div className="insertTask">
         <h3>Enter Task Name</h3>
         <form className="form-body">
@@ -39,6 +37,8 @@ function InsertTask() {
         </form>
       </div>
     </div>
+  ) : (
+     <AddTask />
   );
 }
 
