@@ -57,10 +57,8 @@ const PomodoroTimer = () => {
             >
               {startText}
             </button>
+            <Task />
           </div>
-        </div>
-        <div>
-          <Task />
         </div>
       </div>
     </>

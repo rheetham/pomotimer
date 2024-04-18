@@ -59,7 +59,7 @@ h1 {
 }
 
 .timerBody {
-  height: 75vh;
+  min-height: 75vh;
   flex-direction: column;
   display: flex;
   justify-content: center;
@@ -67,9 +67,11 @@ h1 {
 }
 .timerBody2 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-left: 35px;
+  margin-top: 100px;
 }
 
 .customizationButton {
@@ -85,7 +87,7 @@ h1 {
 }
 
 .timer {
-  font-size: 75px;
+  font-size: 120px;
   margin: 20px;
   padding: 20px 40px;
   box-shadow: #20cd8d 0px 0px 2px 0px;
@@ -113,15 +115,6 @@ h1 {
   box-shadow: 0px 0px 10px 0px #0f744f;
 }
 
-.addTask {
-  text-align: center;
-  padding: 12.5px;
-  display: flex;
-  color: #20cd8d;
-  align-items: center;
-  justify-content: center;
-  background-color: #172627;
-}
 .addBtn {
   background-color: #20cd8d;
   color: #fff;

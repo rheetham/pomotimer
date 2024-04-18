@@ -1,6 +1,13 @@
 .addTask {
-    cursor: pointer;
-    color: #20cd8d;
+  text-align: center;
+  padding: 12.5px;
+  display: flex;
+  color: #20cd8d;
+  align-items: center;
+  justify-content: center;
+  background-color: #172627;
+  cursor: pointer;
+  margin-top: 30px;
 }
 
 h3 {
@@ -43,4 +50,32 @@ h3 {
   cursor: pointer;
   margin-top: 10px;
   margin-bottom: 30px;
+}
+
+.insertTask {
+  margin-top: 70px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px;
+  margin-bottom: 10px;
+}
+
+.taskTitle {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.doneButton {
+  background-color: #20cd8d;
+  color: #fff;
+  border: none;
+  padding: 8px 10px;
+  font-size: 15px;
+  border-radius: 35px;
+  cursor: pointer;
 }

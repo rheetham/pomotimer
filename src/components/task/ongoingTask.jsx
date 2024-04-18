@@ -55,13 +55,13 @@ function AddTask() {
 
   return (
     <div className="addTask">
-      <div className="report">
+      <div>
         {tasks.map((task, index) =>
           task.userName === localStorage.getItem("name") ? (
             <div key={index} className="task">
-              <h3> {task.taskName}</h3>
+              <div className="taskTitle"> {task.taskName}</div>
               <div>
-                <button onClick={handleDelete}>Completed?</button>
+                <button className="doneButton" onClick={handleDelete}>Completed</button>
               </div>
             </div>
           ) : null
