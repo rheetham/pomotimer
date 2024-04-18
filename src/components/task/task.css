@@ -58,6 +58,9 @@ h3 {
 
 .task {
   display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  border-left: 8px solid #20cd8d;
   align-items: center;
   justify-content: space-between;
   margin: 30px;
@@ -65,9 +68,11 @@ h3 {
 }
 
 .taskTitle {
-  color: #fff;
+  text-align: left;
+  color: #172627;
+  padding: 15px;
+  width: 300px;
   font-size: 20px;
-  margin-right: 20px;
 }
 
 .doneButton {
@@ -75,6 +80,7 @@ h3 {
   color: #fff;
   border: none;
   padding: 8px 10px;
+  margin-right: 10px;
   font-size: 15px;
   border-radius: 35px;
   cursor: pointer;

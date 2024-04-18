@@ -59,7 +59,7 @@ h1 {
 }
 
 .timerBody {
-  min-height: 75vh;
+  min-height: 70vh;
   flex-direction: column;
   display: flex;
   justify-content: center;
@@ -90,6 +90,9 @@ h1 {
   font-size: 120px;
   margin: 20px;
   padding: 20px 40px;
+  width: 310px;
+  height: 140px;
+  text-align: center;
   box-shadow: #20cd8d 0px 0px 2px 0px;
   border-radius: 15px;
   box-shadow: 0px 0px 10px 0px #20cd8d;

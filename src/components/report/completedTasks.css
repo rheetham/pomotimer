@@ -77,18 +77,17 @@
     display: flex;
     justify-content: center;
     width: 50%;
-    padding: 20px;
     text-align: center;
     cursor: pointer;
   }
   
   .selectTasksText {
+    color: #172627;
+    background-color: #fff;
     font-size: 50px;
     padding: 20px;
     box-shadow: #20cd8d 0px 0px 10px 0px;
-    border-radius: 10%;
     padding: 10px;
-    width: fit-content;
   }
   
   .completedTasksTitle {
