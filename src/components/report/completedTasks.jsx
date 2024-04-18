@@ -2,6 +2,7 @@ import { onSnapshot, collection, query, orderBy } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { db } from "../../config/firebase-config";
 import "./Report.css";
+import { Link } from "react-router-dom";
 
 function CompletedTasks() {
   const [tasks2, setTasks2] = useState([]);

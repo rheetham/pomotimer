@@ -38,7 +38,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="reports icon">
-          <Link to="/report">
+          <Link to="/createdTasks">
             <ReceiptLongIcon fontSize="large" />
           </Link>
         </div>
