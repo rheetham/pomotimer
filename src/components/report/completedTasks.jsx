@@ -38,8 +38,8 @@ function CompletedTasks() {
       {tasks2.map((task, index) =>
         task.userName === localStorage.getItem("name") ? (
           <div key={index} className="taskDetails">
-            <div className="taskNameTitle">Task Name: {task.taskName}</div>
-            <div>Finished At: {task.finishedAt?.toDate().toString()}</div>
+            <div className="taskNameTitle"><span className="tn">Task Name: </span>{task.taskName}</div>
+            <div><span className="ca">Finished At: </span>{task.finishedAt?.toDate().toString()}</div>
           </div>
         ) : null
       )}

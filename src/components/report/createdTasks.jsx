@@ -37,14 +37,16 @@ function CreatedTasks() {
           <div className="otherTasksText"><Link to="/completedTasks"> Completed Tasks</Link></div>
         </div>
         </div>
+        <div className="detailGroup">
         {tasks.map((task, index) =>
           task.userName === localStorage.getItem("name") ? (
             <div key={index} className="taskDetails">
-              <div className="taskNameTitle">Task Name: {task.taskName}</div>
-              <div>Created At: {task.CreatedAt?.toDate().toString()}</div>
+              <div className="taskNameTitle"><span className="tn">Task Name: </span>{task.taskName}</div>
+              <div><span className="ca">Created At: </span> {task.CreatedAt?.toDate().toString()}</div>
             </div>
           ) : null
         )}
+        </div>
       </div>
     </div>
     </>
