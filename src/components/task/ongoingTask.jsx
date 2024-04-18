@@ -61,7 +61,7 @@ function AddTask() {
             <div key={index} className="task">
               <div className="taskTitle"> {task.taskName}</div>
               <div>
-                <button className="doneButton" onClick={handleDelete}>Completed</button>
+                <button className="doneButton" onClick={handleDelete}>Delete</button>
               </div>
             </div>
           ) : null

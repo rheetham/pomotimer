@@ -15,7 +15,6 @@
 hr {
     width: 100px;
     margin: 15px;
-    margin-bottom: 20px;
     border: 1px solid #20cd8d;
 
 }
@@ -28,5 +27,5 @@ hr {
     font-size: 20px;
     border-radius: 35px;
     cursor: pointer;
-    margin-top: 30px;
+    margin-top: 10px;
 }

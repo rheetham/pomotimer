@@ -1,8 +1,9 @@
 import { onSnapshot, collection, query, orderBy } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { db } from "../../config/firebase-config";
-import "./Report.css";
+import "./completedTasks.css";
 import { Link } from "react-router-dom";
+import Navbar from "../navbar/navbar";
 
 function CompletedTasks() {
   const [tasks2, setTasks2] = useState([]);
@@ -23,22 +24,27 @@ function CompletedTasks() {
     };
   }, []);
   return (
+    <>
+    <Navbar />
     <div className="report">
-      <h1 className="createdTasksTitle">
-        <Link to="/createdTasks">Created Tasks</Link>
-      </h1>
-      <h1 className="completedTasksTitle">
-        Completed Tasks
-      </h1>
+      <div className="reportHeader">
+      <div className="createdTasksTitle">
+        <div className="otherTasksText"><Link to="/createdTasks">Created Tasks</Link></div>
+      </div>
+      <div className="completedTasksTitle">
+        <div className="selectTasksText">Completed Tasks</div>
+      </div>
+      </div>
       {tasks2.map((task, index) =>
         task.userName === localStorage.getItem("name") ? (
-          <div key={index} className="task">
-            <h3>Task Name: {task.taskName}</h3>
-            <h4>Finished At: {task.finishedAt?.toDate().toString()}</h4>
+          <div key={index} className="taskDetails">
+            <div className="taskNameTitle">Task Name: {task.taskName}</div>
+            <div>Finished At: {task.finishedAt?.toDate().toString()}</div>
           </div>
         ) : null
       )}
     </div>
+    </>
   );
 }
 

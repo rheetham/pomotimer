@@ -1,7 +1,7 @@
 import { onSnapshot, collection, query, orderBy } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { db } from "../../config/firebase-config";
-import "./Report.css";
+import "./createdTasks.css";
 
 function AllottedTasks() {
   const [tasks2, setTasks2] = useState([]);
