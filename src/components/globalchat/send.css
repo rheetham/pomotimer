@@ -1,0 +1,32 @@
+.input-style {
+  text-align: center;
+  background-color: #172627;
+  color: #fff;
+  border: 1px solid #20cd8d;
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 35px;
+}
+
+.taskButton {
+  background-color: #20cd8d;
+  color: #fff;
+  border: none;
+  padding: 16px 25px;
+  font-size: 20px;
+  border-radius: 35px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.form-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.taskButton {
+    margin: 0;
+}

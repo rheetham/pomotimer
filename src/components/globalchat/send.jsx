@@ -1,33 +1,30 @@
 import React from "react";
-import "./task.css";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { db } from "../../config/firebase-config";
+import "./send.css";
 
-function InsertTask() {
+function SendChat() {
   const name = localStorage.getItem("name");
 
   const handleNew = async (e) => {
     e.preventDefault();
-    await addDoc(collection(db, "createdTasks"), {
-      taskName: document.getElementsByName("taskname")[0].value,
-      CreatedAt: serverTimestamp(),
-      userName: name,
-    });    
-    await addDoc(collection(db, "currentTask"), {
-      taskName: document.getElementsByName("taskname")[0].value,
+    await addDoc(collection(db, "chats"), {
+      chat: document.getElementsByName("chat")[0].value,
+      sentAt: serverTimestamp(),
       userName: name,
     });
+
   };
   return (
     <div className="insertTask">
       <form className="form-body">
-        <input type="text" name="taskname" className="input-style" />
+        <input type="text" name="chat" className="input-style" />
         <button className="taskButton" onClick={handleNew}>
-          Add Task
+          Send
         </button>
       </form>
     </div>
   );
 }
 
-export default InsertTask;
+export default SendChat;

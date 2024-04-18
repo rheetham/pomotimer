@@ -1,15 +1,16 @@
 import { onSnapshot, collection, query, orderBy } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { db } from "../../config/firebase-config";
-import "./allotedtasks.css";
+import "./chat.css";
 import Navbar from "../navbar/navbar";
+import SendChat from "./send";
 
-function AllottedTasks() {
+function Chat() {
   const [tasks2, setTasks2] = useState([]);
   useEffect(() => {
     const q = query(
-      collection(db, "allottedTask"),
-      orderBy("submitBy", "desc")
+      collection(db, "chats"),
+      orderBy("sentAt", "asc")
     );
     const unsubscribe = onSnapshot(q, (snapshot) => {
       const taskList = [];
@@ -26,18 +27,22 @@ function AllottedTasks() {
     <>
     <Navbar />
     <div className="report">
-      <div className="allottedTitle">Allotted Tasks</div>
-      {tasks2.map((task, index) =>
-        task.userName === localStorage.getItem("name") ? (
+      <div className="allottedTitle">Chat Room</div>
+      {tasks2.map((chats, index) =>
+        chats.userName === localStorage.getItem("name") ? (
           <div key={index} className="taskDetails">
-            <div className="taskNameTitle"><span className="tn">Task Name: </span>{task.taskName}</div>
-            <div><span  className="ca">Submit By: </span>{task.submitBy?.toDate().toString()}</div>
+            <div className="userName">{chats.userName}</div>
+            <div className="taskNameTitle">{chats.chat}</div>
           </div>
-        ) : null
+        ) : <div key={index} className="taskDetails">
+            <div className="userNameOther">{chats.userName}</div>
+            <div className="taskNameTitle">{chats.chat}</div>
+          </div>
       )}
+        <SendChat />
     </div>
   </>
   );
 }
 
-export default AllottedTasks;
+export default Chat;

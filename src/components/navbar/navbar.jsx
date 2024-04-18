@@ -31,6 +31,9 @@ const Navbar = () => {
         </div>
       </Link>
 
+      <div className="chatRoom">
+        <Link to="/chats"> Chats</Link>
+      </div>
       <div className="push">
         <div className="login icon">
           <Link to="/allottedTasks">
