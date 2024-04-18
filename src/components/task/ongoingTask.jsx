@@ -12,6 +12,7 @@ import {
 } from "firebase/firestore";
 import { db } from "../../config/firebase-config";
 import { useEffect, useState } from "react";
+import InsertTask from "./insertTask";
 
 async function deleteLatestDocument() {
   const taskRef = collection(db, "currentTask");
@@ -24,6 +25,11 @@ async function deleteLatestDocument() {
 }
 
 function AddTask() {
+  const [content, setContent] = useState(true);
+
+  const changeContent = () => {
+    setContent(false);
+  };
   const [tasks, setTasks] = useState([]);
   useEffect(() => {
     const q = query(collection(db, "currentTask"), orderBy("userName", "desc"));
@@ -53,21 +59,30 @@ function AddTask() {
     deleteLatestDocument();
   };
 
-  return (
-    <div className="addTask">
-      <div>
-        {tasks.map((task, index) =>
-          task.userName === localStorage.getItem("name") ? (
-            <div key={index} className="task">
-              <div className="taskTitle"> {task.taskName}</div>
-              <div>
-                <button className="doneButton" onClick={handleDelete}>Delete</button>
+  return content ? (
+    <div>
+      <div className="addTask">
+        <div>
+          {tasks.map((task, index) =>
+            task.userName === localStorage.getItem("name") ? (
+              <div key={index} className="task">
+                <div className="taskTitle"> {task.taskName}</div>
+                <div>
+                  <button className="doneButton" onClick={handleDelete}>
+                    Delete
+                  </button>
+                </div>
               </div>
-            </div>
-          ) : null
-        )}
+            ) : null
+          )}
+        </div>
+      </div>
+      <div className="addTask" onClick={changeContent}>
+        Add Task
       </div>
     </div>
+  ) : (
+    <InsertTask />
   );
 }
 
