@@ -3,6 +3,7 @@ import TimelineIcon from "@mui/icons-material/Timeline";
 import LogoutIcon from "@mui/icons-material/Logout";
 import EditCalendarIcon from "@mui/icons-material/EditCalendar";
 import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
+import ForumIcon from "@mui/icons-material/Forum";
 import { Link } from "react-router-dom";
 import "../homePage/Home.css";
 
@@ -31,10 +32,12 @@ const Navbar = () => {
         </div>
       </Link>
 
-      <div className="chatRoom">
-        <Link to="/chats"> Chats</Link>
-      </div>
       <div className="push">
+        <div className="chatRoom">
+          <Link to="/chats">
+            <ForumIcon fontSize="large" />
+          </Link>
+        </div>
         <div className="login icon">
           <Link to="/allottedTasks">
             <EditCalendarIcon fontSize="large" />
@@ -45,9 +48,11 @@ const Navbar = () => {
             <ReceiptLongIcon fontSize="large" />
           </Link>
         </div>
-        <div className="login icon">
-          <LogoutIcon fontSize="large" onClick={handleLogout} />
-        </div>
+        <Link to="/logout">
+          <div className="login icon">
+            <LogoutIcon fontSize="large" />
+          </div>
+        </Link>
       </div>
     </div>
   );

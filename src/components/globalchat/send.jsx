@@ -13,7 +13,6 @@ function SendChat() {
       sentAt: serverTimestamp(),
       userName: name,
     });
-
   };
   return (
     <div className="insertTask">

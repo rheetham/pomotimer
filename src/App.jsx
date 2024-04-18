@@ -9,7 +9,7 @@ import AllottedTasks from "./components/report/allotedTasks";
 import CompletedTasks from "./components/report/completedTasks";
 import CreatedTasks from "./components/report/createdTasks";
 import Chat from "./components/globalchat/chat";
-
+import Logout from "./components/auth/logoutConfirm";
 function App() {
   return (
     <div>
@@ -18,6 +18,7 @@ function App() {
           <Route path="/" exact element={<Auth />} />
           <Route path="/timer" element={<PomodoroTimer />} />
           <Route path="/chats" element={<Chat />} />
+          <Route path="/logout" element={<Logout />} />
           <Route path="/createdTasks" element={<CreatedTasks />} />
           <Route path="/completedTasks" element={<CompletedTasks />} />
           <Route path="/allottedTasks" element={<AllottedTasks />} />
