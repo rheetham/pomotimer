@@ -28,7 +28,6 @@ function InsertTask() {
   return content ? (
         <div>
       <div className="insertTask">
-        <h3>Enter Task Name</h3>
         <form className="form-body">
           <input type="text" name="taskname" className="input-style" />
           <button className="taskButton" onClick={handleNew}>

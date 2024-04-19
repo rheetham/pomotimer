@@ -1,5 +1,6 @@
-.input-style {
+.msgInput {
   text-align: center;
+  width: 40vw;
   background-color: #172627;
   color: #fff;
   border: 1px solid #20cd8d;
@@ -29,4 +30,15 @@
 
 .taskButton {
     margin: 0;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #172627;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }

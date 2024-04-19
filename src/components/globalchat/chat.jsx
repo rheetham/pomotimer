@@ -25,21 +25,23 @@ function Chat() {
   }, []);
   return (
     <>
-    <Navbar />
-    <div className="report">
-      <div className="allottedTitle">Chat Room</div>
+    <Navbar className="stick-nav"/>
+    <div className="chatRoom">
+      <div className="chatRoomTitle">Chat Room</div>
+      <div className="chatGroup">
       {tasks2.map((chats, index) =>
         chats.userName === localStorage.getItem("name") ? (
-          <div key={index} className="taskDetails">
-            <div className="userName">{chats.userName}</div>
-            <div className="taskNameTitle">{chats.chat}</div>
+          <div key={index} className="chatDetails">
+            <div className="mainUserName commonstyle">You</div>
+            <div className="chatMsg">{chats.chat}</div>
           </div>
-        ) : <div key={index} className="taskDetails">
-            <div className="userNameOther">{chats.userName}</div>
-            <div className="taskNameTitle">{chats.chat}</div>
+        ) : <div key={index} className="chatDetails">
+            <div className="otherUserName commonstyle">{(chats.userName).slice(1,-1)}</div>
+            <div className="chatMsg">{chats.chat}</div>
           </div>
       )}
-        <SendChat />
+      </div>
+        <SendChat className = "stick-send"/>
     </div>
   </>
   );

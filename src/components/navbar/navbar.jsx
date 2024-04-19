@@ -24,7 +24,7 @@ const Navbar = () => {
       });
   };
   return (
-    <div className="head">
+    <div className="head nav">
       <Link to="/timer">
         <div className="logo icon">
           <TimelineIcon fontSize="large" />

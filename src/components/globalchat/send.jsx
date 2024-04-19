@@ -15,9 +15,9 @@ function SendChat() {
     });
   };
   return (
-    <div className="insertTask">
+    <div className="insertTask footer">
       <form className="form-body">
-        <input type="text" name="chat" className="input-style" />
+        <input type="text" name="chat" className="input-style msg-input" />
         <button className="taskButton" onClick={handleNew}>
           Send
         </button>
