@@ -1,0 +1,120 @@
+.Reports {
+    height: 60vh;
+    width: 25vw;
+    margin: 70px auto;
+    padding: 25px;
+    box-shadow: 0 0 0 1px #20cd8d;
+    border-radius: 10%;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .reportsTitle {
+    margin-left: 140px;
+    margin-right: 90px;
+  }
+  
+  hr {
+    width: 150px;
+    margin-bottom: 35px;
+    border: 1px solid #20cd8d;
+  }
+  
+  .frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+  }
+  
+  .focusHours,
+  .tasksCompleted {
+    text-align: center;
+    width: 60px;
+    background-color: #172627;
+    color: #fff;
+    border: 1px solid #20cd8d;
+    margin: 10px;
+    padding: 20px 35px;
+    font-size: 20px;
+    border-radius: 35px;
+    cursor: pointer;
+  }
+  
+  .update {
+    background-color: #20cd8d;
+    color: #fff;
+    border: none;
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 35px;
+    cursor: pointer;
+  }
+  
+  .update:hover {
+    box-shadow: 0px 0px 10px 0px #0f744f;
+  }
+  .close {
+    color: #fff;
+    border: none;
+    margin: 10px;
+    border-radius: 35px;
+    cursor: pointer;
+  }
+  
+  .reportHeader {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .createdTasksTitle {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .selectTasksText {
+    color: #172627;
+    background-color: #fff;
+    font-size: 50px;
+    box-shadow: #20cd8d 0px 0px 10px 0px;
+  }
+  
+  .completedTasksTitle {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .otherTasksText {
+    font-size: 50px;
+    padding: 20px;
+    padding: 10px;
+    width: fit-content;
+  }
+  
+  .taskDetails {
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    padding: 30px;
+    border: 1px solid #20cd8d;
+    border-radius: 5%;
+    cursor: pointer;
+  }
+  
+  .taskNameTitle {
+    margin-bottom: 20px;
+  }

@@ -2,6 +2,8 @@ import { auth, provider } from "../../config/firebase-config";
 import { signInWithPopup } from "firebase/auth";
 import { useNavigate, Navigate } from "react-router-dom";
 import { useGetUserInfo } from "./useGetUserInfo";
+import TimelineIcon from "@mui/icons-material/Timeline";
+import "./index.css";
 
 export const Auth = () => {
   const navigate = useNavigate();
@@ -19,16 +21,20 @@ export const Auth = () => {
     localStorage.setItem("auth", JSON.stringify(authInfo));
     navigate("/timer");
     localStorage.setItem("name", JSON.stringify(authInfo.name));
-  };
-
-  //if (isAuth) {
+  };  
+  
+  // if (isAuth) {
   // return <Navigate to="/timer" />;
   // }
 
   return (
-    <div>
-      <p>Sign In With Google to Continue</p>
-      <button onClick={signInWithGoogle}> Sign In With Google</button>
+    <div className="signIn">
+      <div className="icon">
+        <TimelineIcon className="logo" fontSize="large"/><h1>Zenith</h1>
+      </div>
+      <hr></hr>
+
+      <button className="signInButton" onClick={signInWithGoogle}> Sign In With Google To Continue</button>
     </div>
   );
 };

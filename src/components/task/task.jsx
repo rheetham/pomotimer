@@ -1,19 +1,22 @@
 import React from "react";
 import "./task.css";
 import InsertTask from "./insertTask";
-import AddTask from "./addTask";
+import AddTask from "./ongoingTask";
 import { useState } from "react";
 
 const Task = () => {
   const [content, setContent] = useState(false);
 
   const changeContent = () => {
-    setContent(true);
+    setContent(!content);
   };
 
   return (
     <div>
-      <p onClick={changeContent}>{content ? <InsertTask/> : <AddTask />}</p>
+      {content ? <InsertTask /> : <AddTask />}
+      <p onClick={changeContent}>
+        {content ? null : <p className="addTask">Add Task?</p>}
+      </p>
     </div>
   );
 };

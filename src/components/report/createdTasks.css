@@ -66,3 +66,61 @@ hr {
   border-radius: 35px;
   cursor: pointer;
 }
+
+.reportHeader {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.createdTasksTitle {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.selectTasksText {
+  font-size: 50px;
+  padding: 20px;
+  box-shadow: #20cd8d 0px 0px 10px 0px;
+  border-left: #20cd8d 10px solid;
+  border-radius: 10px;
+  width: 420px;
+}
+
+.completedTasksTitle {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+}
+
+.otherTasksText {
+  font-size: 50px;
+  padding: 20px;
+  padding: 10px;
+  width: fit-content;
+}
+
+.taskDetails {
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  margin: 40px 300px;
+  padding: 30px;
+  border: 1px solid #20cd8d;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.taskNameTitle {
+  margin-bottom: 20px;
+}
+
+.tn, .ca {
+  color: #20cd8d;
+}

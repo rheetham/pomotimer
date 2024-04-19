@@ -1,0 +1,49 @@
+.chatRoom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chatRoomTitle {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    font-size: 70px;
+    margin-top: 50px;
+}
+
+.chatGroup {
+    width: 55vw;
+    margin-bottom: 50px;
+}
+
+.chatDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 70px;
+}
+
+.mainUserName {
+  color: #20cd8d;
+}
+
+.otherUserName {
+  color: orange;
+}
+
+.commonstyle {
+  font-size: 25px;
+}
+
+.chatMsg {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.stick-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}

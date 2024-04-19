@@ -4,6 +4,8 @@ import Task from "../task/task";
 import { Link } from "react-router-dom";
 import Navbar from "../navbar/navbar";
 import "../homePage/Home.css";
+import InsertTask from "../task/insertTask";
+import AddTask from "../task/ongoingTask";
 const PomodoroTimer = () => {
   const [focusTime, setFocusTime] = useState(45 * 60); // 45 minutes in seconds
   const [breakTime, setBreakTime] = useState(15 * 60); // 15 minutes in seconds
@@ -57,16 +59,9 @@ const PomodoroTimer = () => {
             >
               {startText}
             </button>
-          </div>
-          <div className="customizationButton">
-            <Link to="/customize">
-              <DriveFileRenameOutlineRoundedIcon fontSize="medium" />
-            </Link>
+            <AddTask />
           </div>
         </div>
-          <div>
-            <Task />
-          </div>
       </div>
     </>
   );

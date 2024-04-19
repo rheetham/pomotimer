@@ -1,0 +1,44 @@
+.msg-input {
+  text-align: center;
+  width: 35vw;
+  background-color: #172627;
+  color: #fff;
+  border: 1px solid #20cd8d;
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 35px;
+}
+
+.taskButton {
+  background-color: #20cd8d;
+  color: #fff;
+  border: none;
+  padding: 16px 25px;
+  font-size: 20px;
+  border-radius: 35px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.form-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.taskButton {
+    margin: 0;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #172627;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
