@@ -1,11 +1,12 @@
 import { onSnapshot, collection, query, orderBy } from "firebase/firestore";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { db } from "../../config/firebase-config";
 import "./chat.css";
 import Navbar from "../navbar/navbar";
 import SendChat from "./send";
 
 function Chat() {
+  
   const [tasks2, setTasks2] = useState([]);
   useEffect(() => {
     const q = query(
@@ -38,10 +39,12 @@ function Chat() {
         ) : <div key={index} className="chatDetails">
             <div className="otherUserName commonstyle">{(chats.userName).slice(1,-1)}</div>
             <div className="chatMsg">{chats.chat}</div>
+            
           </div>
       )}
       </div>
         <SendChat className = "stick-send"/>
+        
     </div>
   </>
   );
